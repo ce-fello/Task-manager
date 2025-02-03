@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>To-Do List</title>
+</head>
+<body>
+<h1>Tasks</h1>
+<ul>
+    <li th:each="task : ${tasks}">
+        <span th:text="${task.title}"></span> - <span
+            th:text="${task.completed ? 'Completed' : 'Not Completed'}"></span>
+    </li>
+</ul>
+</body>
+</html>
