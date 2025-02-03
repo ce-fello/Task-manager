@@ -1,5 +1,7 @@
 package ru.felco.task_manager.service.implementation;
 
+import lombok.AllArgsConstructor;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 import ru.felco.task_manager.model.Task;
 import ru.felco.task_manager.repository.TaskRepository;
@@ -8,6 +10,7 @@ import ru.felco.task_manager.service.TaskService;
 import java.util.List;
 
 @Service
+@Primary
 public class TaskServiceImplemented implements TaskService {
     private final TaskRepository taskRepository;
 

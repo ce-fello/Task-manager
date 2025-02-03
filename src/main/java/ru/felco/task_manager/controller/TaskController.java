@@ -1,5 +1,6 @@
 package ru.felco.task_manager.controller;
 
+import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import ru.felco.task_manager.model.Task;
 import ru.felco.task_manager.service.implementation.TaskServiceImplemented;
@@ -9,7 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/tasks")
 public class TaskController {
-    private final TaskServiceImplemented taskService;
+    private TaskServiceImplemented taskService;
 
     public TaskController(TaskServiceImplemented taskService) {
         this.taskService = taskService;
