@@ -1,6 +1,5 @@
 package ru.felco.task_manager.service.implementation;
 
-import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 import ru.felco.task_manager.model.Task;
@@ -24,8 +23,8 @@ public class TaskServiceImplemented implements TaskService {
     }
 
     @Override
-    public Task createTask(Task task) {
-        return taskRepository.save(task);
+    public void createTask(Task task) {
+        taskRepository.save(task);
     }
 
     @Override

@@ -18,3 +18,8 @@ spring:
         level:
             org.springframework: INFO
             com.example.todolist: DEBUG
+            org.thymeleaf: DEBUG
+    thymeleaf:
+        prefix: classpath:/templates/
+        suffix: .html
+        cache: false
