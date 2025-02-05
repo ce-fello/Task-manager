@@ -10,8 +10,10 @@
     <thead>
     <tr>
         <th>ID</th>
-        <th>Название</th>
-        <th>Описание</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Is Completed</th>
+        <th>Creation Time</th>
     </tr>
     </thead>
     <tbody>
@@ -19,6 +21,8 @@
         <td th:text="${task.id}"></td>
         <td th:text="${task.title}"></td>
         <td th:text="${task.description}"></td>
+        <td th:text="${task.isCompleted}"></td>
+        <td th:text="${task.createdAt}"></td>
     </tr>
     </tbody>
 </table>

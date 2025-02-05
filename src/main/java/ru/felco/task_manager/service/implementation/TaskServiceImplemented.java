@@ -1,6 +1,5 @@
 package ru.felco.task_manager.service.implementation;
 
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 import ru.felco.task_manager.model.Task;
 import ru.felco.task_manager.repository.TaskRepository;
@@ -9,31 +8,30 @@ import ru.felco.task_manager.service.TaskService;
 import java.util.List;
 
 @Service
-@Primary
 public class TaskServiceImplemented implements TaskService {
-    private final TaskRepository taskRepository;
+    private final TaskRepository repository;
 
     public TaskServiceImplemented(TaskRepository repository) {
-        this.taskRepository = repository;
+        this.repository = repository;
     }
 
     @Override
     public List<Task> getAllTasks() {
-        return taskRepository.findAll();
+        return repository.findAll();
     }
 
     @Override
     public void createTask(Task task) {
-        taskRepository.save(task);
+        repository.save(task);
     }
 
     @Override
     public Task updateTask(Task task) {
-        return taskRepository.save(task);
+        return repository.save(task);
     }
 
     @Override
     public void deleteTask(Long id) {
-        taskRepository.deleteById(id);
+        repository.deleteById(id);
     }
 }
